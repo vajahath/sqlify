@@ -1,14 +1,60 @@
 ##### Yet another SQL query builder
 
-> There are many sql query builders out there. But this one is mine. This one make sense for me.
+[![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
+[![Known Vulnerabilities](https://snyk.io/test/npm/sqlify/badge.svg)](https://snyk.io/test/npm/sqlify)
 
-## Install 
+![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
+
+> There are many sql query builders out there. But this one is mine. This one make sense to me :wink:.
+
+## Install
 ```bash
 npm install --save sqlify
 ```
+# Why?
+- Helps you to build dynamic sql queries.
+- **Example use case:** suppose, you are getting a POST request to insert some data to your SQL database.
+  You'll get the data in `req.body` as `{name: "Swat", age: 22, address: "ND"}`.
+  Now make the query like:
+```js
+let resource = {
+	set: req.body
+}
+sqlify(chain, resource); // done!
+```
+
+## Examples
+#### SELECT
+```js
+let resource = {
+	fields: ['name', 'age', 'address'],
+	where: {
+		name: 'Swat',
+		age: 22
+	}
+};
+let chain = sql.select().from('users');
+sqlify(chain, resource);
+
+chain.toString() // => SELECT name, age, address FROM users WHERE (name=Swat) AND (age=22)
+```
+
+#### INSERT
+```js
+let resource = {
+	set: {
+		name: 'Swat',
+		age: 22
+	}
+};
+let chain = sql.insert().into('users');
+sqlify(chain, resource);
+
+chain.toString() // => INSERT INTO users (name, age) VALUES ('Swat', 22)
+```
 
 ## How?
-This package is used along with [squel](https://www.npmjs.com/package/squel).
+**This package is used along with [squel](https://www.npmjs.com/package/squel) package.**
 
 `sqlify` exposes a function which receives 2 arguments. They are:
 - `chain`
