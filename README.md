@@ -5,7 +5,7 @@
 
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
-> There are many sql query builders out there. But this one make sense to me :wink:.
+> There are many sql query builders out there. But this one make more sense to me :wink:.
 
 Used along with [squel](https://www.npmjs.com/package/squel).
 
@@ -139,7 +139,7 @@ lme.s(query);
 > This package currently supports `fields`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
 
 ## Change log
-- v1.0.1, 1.0.2
+- v1.0.1, 1.0.2, 1.0.3
   - bug fix (in `package.json`)
   - better docs
 
