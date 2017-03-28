@@ -5,7 +5,7 @@
 
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
-> There are many sql query builders out there. But this one make more sense to me :wink:.
+> There are many sql query builders out there. But this one makes more sense to me :wink:.
 
 Used along with [squel](https://www.npmjs.com/package/squel).
 
