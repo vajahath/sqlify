@@ -7,7 +7,7 @@
 
 > There are many sql query builders out there. But this one make sense to me :wink:.
 
-Used along with [squel](https://www.npmjs.com/package/squel)
+Used along with [squel](https://www.npmjs.com/package/squel).
 
 ## Install
 ```bash
@@ -128,12 +128,23 @@ lme.s(query);
 // => SELECT name, age, address FROM users WHERE (name=Swa) AND (age=22)
 ...
 ```
+
+##### Unclear about something here? Feel free to rise an issue..
+
 ## Also,
 **Since `sqlify` takes in and out chain functions, you can modify it even after `sqlify`ing it.**
 
 ---
 
-> This package currently supports `fields`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: **`sqlify`'s source code is fairly simple and easy to understand. Find time to contribute to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel)**
+> This package currently supports `fields`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: **`sqlify`'s source code is fairly simple and easy to understand. Find time to :star: contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).**
+
+## Change log
+- v1.0.1
+  - better docs
+
+- v1.0.0
+  - initial release
+
 
 ## Licence
 MIT © [Vajahath Ahmed](https://twitter.com/vajahath7)
