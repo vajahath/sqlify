@@ -7,6 +7,8 @@
 
 > There are many sql query builders out there. But this one make sense to me :wink:.
 
+Used along with [squel](https://www.npmjs.com/package/squel)
+
 ## Install
 ```bash
 npm install --save sqlify
@@ -16,6 +18,7 @@ npm install --save sqlify
 - **Example use case:** suppose, you are getting a POST request to insert some data to your SQL database.
   You'll get the data in `req.body` as `{name: "Swat", age: 22, address: "ND"}`.
   Now make the query like:
+
   ```js
   let resource = {
     set: req.body
@@ -26,6 +29,9 @@ npm install --save sqlify
 ## Examples
 #### SELECT
 ```js
+const sql = require('squel');
+const sqlify = require('sqlify');
+
 let resource = {
   fields: ['name', 'age', 'address'],
   where: {
@@ -41,6 +47,9 @@ chain.toString() // => SELECT name, age, address FROM users WHERE (name=Swat) AN
 
 #### INSERT
 ```js
+const sql = require('squel');
+const sqlify = require('sqlify');
+
 let resource = {
   set: {
     name: 'Swat',
