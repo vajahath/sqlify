@@ -5,33 +5,33 @@
 
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
-> There are many sql query builders out there. But this one is mine. This one make sense to me :wink:.
+> There are many sql query builders out there. But this one make sense to me :wink:.
 
 ## Install
 ```bash
 npm install --save sqlify
 ```
-# Why?
+## Why?
 - Helps you to build dynamic sql queries.
 - **Example use case:** suppose, you are getting a POST request to insert some data to your SQL database.
   You'll get the data in `req.body` as `{name: "Swat", age: 22, address: "ND"}`.
   Now make the query like:
-```js
-let resource = {
-	set: req.body
-}
-sqlify(chain, resource); // done!
-```
+  ```js
+  let resource = {
+    set: req.body
+  }
+  sqlify(chain, resource); // done!
+  ```
 
 ## Examples
 #### SELECT
 ```js
 let resource = {
-	fields: ['name', 'age', 'address'],
-	where: {
-		name: 'Swat',
-		age: 22
-	}
+  fields: ['name', 'age', 'address'],
+  where: {
+    name: 'Swat',
+    age: 22
+  }
 };
 let chain = sql.select().from('users');
 sqlify(chain, resource);
@@ -42,10 +42,10 @@ chain.toString() // => SELECT name, age, address FROM users WHERE (name=Swat) AN
 #### INSERT
 ```js
 let resource = {
-	set: {
-		name: 'Swat',
-		age: 22
-	}
+  set: {
+    name: 'Swat',
+    age: 22
+  }
 };
 let chain = sql.insert().into('users');
 sqlify(chain, resource);
