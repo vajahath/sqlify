@@ -8,6 +8,10 @@ var appendingValue = 0;
 var lme = require('lme');
 
 module.exports = function(chain, resource) {
+	// refrain from sins
+	// sometimes if resource contains req.body, this is required to make clear object (as of now)
+	resource = JSON.parse(JSON.stringify(resource));
+
 	// iterate through each properties of `resource`
 	for (key in resource) {
 		if (!resource.hasOwnProperty(key)) {
