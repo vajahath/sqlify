@@ -11,12 +11,13 @@ describe('Testing sqlify', function() {
 			fields: ['name', 'age', 'address'],
 			where: {
 				name: 'Divya',
-				age: 44
+				age: 44,
+				boy: false
 			}
 		};
 		var chain = sql.select().from('users');
 		makeQuery(chain, resource);
-		expect(chain.toString()).to.equal('SELECT name, age, address FROM users WHERE (name=\'Divya\') AND (age=44)');
+		expect(chain.toString()).to.equal('SELECT name, age, address FROM users WHERE (name=\'Divya\') AND (age=44) AND (boy=false)');
 		done();
 	});
 
@@ -25,12 +26,13 @@ describe('Testing sqlify', function() {
 		var resource = {
 			set: {
 				name: 'Divya',
-				age: 44
+				age: 44,
+				girl: true
 			}
 		};
 		var chain = sql.insert().into('users');
 		makeQuery(chain, resource);
-		expect(chain.toString()).to.equal('INSERT INTO users (name, age) VALUES (\'Divya\', 44)');
+		expect(chain.toString()).to.equal('INSERT INTO users (name, age, girl) VALUES (\'Divya\', 44, TRUE)');
 		done();
 	});
 });
