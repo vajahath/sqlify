@@ -98,7 +98,7 @@ let resource = {
     fields: ['name', 'age', 'address'],
     where: {
         name: 'Swa',
-        age: '22'
+        age: 22
     }
 };
 
@@ -125,7 +125,7 @@ sqlify(chain, resource);
 let query = chain.toString();
 // see it
 lme.s(query);
-// => SELECT name, age, address FROM users WHERE (name=Swa) AND (age=22)
+// => SELECT name, age, address FROM users WHERE (name='Swa') AND (age=22)
 ...
 ```
 
@@ -139,6 +139,8 @@ lme.s(query);
 > This package currently supports `fields`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
 
 ## Change log
+- v1.0.4
+  - bug fix with 's in select queries
 - v1.0.1, 1.0.2, 1.0.3
   - bug fix (in `package.json`)
   - better docs
