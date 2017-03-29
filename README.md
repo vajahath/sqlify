@@ -1,5 +1,9 @@
 ##### Yet another SQL query builder
 
+
+# THIS PACKAGE IS IN BETA
+> You are warned!
+
 [![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
 [![Known Vulnerabilities](https://snyk.io/test/npm/sqlify/badge.svg)](https://snyk.io/test/npm/sqlify)
 
