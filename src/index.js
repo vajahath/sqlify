@@ -29,9 +29,9 @@ module.exports = function(chain, resource) {
 				appendingValue = resource[key][item];
 					// modify appendingValue to include 's if necessary
 				switch (typeof(resource[key][item])) {
-				case 'numberd':
+				case 'number':
 					break;
-				case 'stringd':
+				case 'string':
 					appendingValue = '\'' + appendingValue + '\'';
 					break;
 				default:
