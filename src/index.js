@@ -55,6 +55,31 @@ module.exports = function(chain, resource) {
 					chain = chain.set(item, resource[key][item]);
 				}
 				break;
+			case 'join':
+				resource[key].forEach(function(item) {
+					chain = chain.join(item[0], item[1], item[2]);
+				});
+				break;
+			case 'left_join':
+				resource[key].forEach(function(item) {
+					chain = chain.left_join(item[0], item[1], item[2]);
+				});
+				break;
+			case 'right_join':
+				resource[key].forEach(function(item) {
+					chain = chain.right_join(item[0], item[1], item[2]);
+				});
+				break;
+			case 'outer_join':
+				resource[key].forEach(function(item) {
+					chain = chain.outer_join(item[0], item[1], item[2]);
+				});
+				break;
+			case 'cross_join':
+				resource[key].forEach(function(item) {
+					chain = chain.cross_join(item[0], item[1], item[2]);
+				});
+				break;
 		}
 	}
 };
