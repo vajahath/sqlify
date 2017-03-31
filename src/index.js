@@ -4,9 +4,9 @@
  */
 var lme = require('lme');
 var squel = require('squel');
+var handles = require('./handles');
 
 var key;
-var appendingValue;
 
 var sqlify = function(chain, resource) {
 	// refrain from sins
@@ -19,68 +19,41 @@ var sqlify = function(chain, resource) {
 			continue;
 		}
 		switch (key) {
-			case 'fields':
-				resource[key].forEach(function(item) {
-					chain = chain.field(item);
-				});
-				break;
+		case 'fields':
+			handles.field(chain, resource[key]);
+			break;
 
-			case 'where':
-				for (item in resource[key]) {
-					if (!resource[key].hasOwnProperty(item)) {
-						continue;
-					}
+		case 'where':
+			handles.where(chain, resource[key]);
+			break;
 
-					appendingValue = resource[key][item];
-					// modify appendingValue to include 's if necessary
-					switch (typeof(resource[key][item])) {
-						case ('number'):
-						case ('boolean'):
-							break;
-						case 'string':
-							appendingValue = '\'' + appendingValue + '\'';
-							break;
-						default:
-							lme.e('SQLIFY ERR: a type other than "string", "number", "boolean" encountered in \'where\'');
-							throw new Error('a type other than "string", "number", "boolean" encountered');
-					}
-					chain = chain.where(item + '=' + appendingValue);
-				}
-				break;
+		case 'set':
+			handles.set(chain, resource[key]);
+			break;
 
-			case 'set':
-				for (var item in resource[key]) {
-					if (!resource[key].hasOwnProperty(item)) {
-						continue;
-					}
-					chain = chain.set(item, resource[key][item]);
-				}
-				break;
-			case 'join':
-				resource[key].forEach(function(item) {
-					chain = chain.join(item[0], item[1], item[2]);
-				});
-				break;
-			case 'left_join':
-				resource[key].forEach(function(item) {
-					chain = chain.left_join(item[0], item[1], item[2]);
-				});
-				break;
-			case 'right_join':
-				resource[key].forEach(function(item) {
-					chain = chain.right_join(item[0], item[1], item[2]);
-				});
-				break;
-			case 'outer_join':
-				resource[key].forEach(function(item) {
-					chain = chain.outer_join(item[0], item[1], item[2]);
-				});
-				break;
-			case 'cross_join':
-				resource[key].forEach(function(item) {
-					chain = chain.cross_join(item[0], item[1], item[2]);
-				});
-				break;
+		case 'join':
+			handles.join(chain, resource[key]);
+			break;
+
+		case 'left_join':
+			handles.left_join(chain, resource[key]);
+			break;
+
+		case 'right_join':
+			handles.right_join(chain, resource[key]);
+			break;
+
+		case 'outer_join':
+			handles.outer_join(chain, resource[key]);
+			break;
+
+		case 'cross_join':
+			handles.cross_join(chain, resource[key]);
+			break;
+
+		default:
+			lme.e('method ' + key + ' is not implemented');
+			break;
 		}
 	}
 };
@@ -89,4 +62,4 @@ var sqlify = function(chain, resource) {
 module.exports = {
 	squel: squel,
 	sqlify: sqlify
-}
+};
