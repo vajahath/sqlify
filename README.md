@@ -32,7 +32,7 @@ npm install --save sqlify
 ## Examples
 #### SELECT
 ```js
-const sql = require('squel').squel;
+const sql = require('sqlify').squel;
 const sqlify = require('sqlify').sqlify;
 
 let resource = {
@@ -50,7 +50,7 @@ chain.toString() // => SELECT name, age, address FROM users WHERE (name=Swat) AN
 
 #### INSERT
 ```js
-const sql = require('squel').squel;
+const sql = require('sqlify').squel;
 const sqlify = require('sqlify').sqlify;
 
 let resource = {
@@ -74,7 +74,7 @@ chain.toString() // => INSERT INTO users (name, age) VALUES ('Swat', 22)
 
 #### Step 1: Require the package
 ```js
-const sql = require('squel').squel;
+const sql = require('sqlify').squel;
 const sqlify = require('sqlify').sqlify;
 const lme = require('lme') // not necessary. For printing things out..
 
