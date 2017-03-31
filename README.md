@@ -11,7 +11,6 @@
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
-Used along with [squel](https://www.npmjs.com/package/squel).
 
 ## Install
 ```bash
@@ -33,8 +32,8 @@ npm install --save sqlify
 ## Examples
 #### SELECT
 ```js
-const sql = require('squel');
-const sqlify = require('sqlify');
+const sql = require('squel').squel;
+const sqlify = require('sqlify').sqlify;
 
 let resource = {
   fields: ['name', 'age', 'address'],
@@ -51,8 +50,8 @@ chain.toString() // => SELECT name, age, address FROM users WHERE (name=Swat) AN
 
 #### INSERT
 ```js
-const sql = require('squel');
-const sqlify = require('sqlify');
+const sql = require('squel').squel;
+const sqlify = require('sqlify').sqlify;
 
 let resource = {
   set: {
@@ -73,10 +72,10 @@ chain.toString() // => INSERT INTO users (name, age) VALUES ('Swat', 22)
 - `chain`
 - `resource`
 
-#### Step 1: Require both packages
+#### Step 1: Require the package
 ```js
-const sql = require('squel');
-const sqlify = require('sqlify');
+const sql = require('squel').squel;
+const sqlify = require('sqlify').sqlify;
 const lme = require('lme') // not necessary. For printing things out..
 
 ...
