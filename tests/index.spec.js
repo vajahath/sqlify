@@ -1,7 +1,8 @@
 /*global it describe*/
 
-var makeQuery = require('./../src');
-var sql = require('squel');
+var makeQuery = require('./../src').sqlify;
+var sql = require('./../src').squel;
+
 var expect = require('chai').expect;
 // var lme = require('lme');
 
