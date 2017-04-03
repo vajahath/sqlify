@@ -3,12 +3,12 @@
  * `resource` includes the data to build the query
  */
 var lme = require('lme');
-var squel = require('squel');
+var squel = require('squel').useFlavour('postgres');
 var handles = require('./handles');
 
 var key;
 
-var sqlify = function(chain, resource) {
+var sqlify = function (chain, resource) {
 	// refrain from sins
 	// sometimes if resource contains req.body, this is required to make clear object (as of now)
 	resource = JSON.parse(JSON.stringify(resource));
@@ -49,6 +49,10 @@ var sqlify = function(chain, resource) {
 
 		case 'cross_join':
 			handles.cross_join(chain, resource[key]);
+			break;
+
+		case 'returning':
+			handles.returning(chain, resource[key]);
 			break;
 
 		default:
