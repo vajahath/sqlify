@@ -8,3 +8,4 @@ tests/
 .editorconfig
 .eslintignore
 .gitignore
+.idea/
