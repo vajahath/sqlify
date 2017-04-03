@@ -19,45 +19,45 @@ var sqlify = function (chain, resource) {
 			continue;
 		}
 		switch (key) {
-			case 'fields':
-				handles.field(chain, resource[key]);
-				break;
+		case 'fields':
+			handles.field(chain, resource[key]);
+			break;
 
-			case 'where':
-				handles.where(chain, resource[key]);
-				break;
+		case 'where':
+			handles.where(chain, resource[key]);
+			break;
 
-			case 'set':
-				handles.set(chain, resource[key]);
-				break;
+		case 'set':
+			handles.set(chain, resource[key]);
+			break;
 
-			case 'join':
-				handles.join(chain, resource[key]);
-				break;
+		case 'join':
+			handles.join(chain, resource[key]);
+			break;
 
-			case 'left_join':
-				handles.left_join(chain, resource[key]);
-				break;
+		case 'left_join':
+			handles.left_join(chain, resource[key]);
+			break;
 
-			case 'right_join':
-				handles.right_join(chain, resource[key]);
-				break;
+		case 'right_join':
+			handles.right_join(chain, resource[key]);
+			break;
 
-			case 'outer_join':
-				handles.outer_join(chain, resource[key]);
-				break;
+		case 'outer_join':
+			handles.outer_join(chain, resource[key]);
+			break;
 
-			case 'cross_join':
-				handles.cross_join(chain, resource[key]);
-				break;
+		case 'cross_join':
+			handles.cross_join(chain, resource[key]);
+			break;
 
-			case 'returning':
-				handles.returning(chain, resource[key]);
-				break;
+		case 'returning':
+			handles.returning(chain, resource[key]);
+			break;
 
-			default:
-				lme.e('method ' + key + ' is not implemented');
-				break;
+		default:
+			lme.e('method ' + key + ' is not implemented');
+			break;
 		}
 	}
 };
