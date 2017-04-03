@@ -1,6 +1,6 @@
 {
 	"name": "sqlify",
-	"version": "1.0.4-beta.2",
+	"version": "1.0.4-beta.4",
 	"description": "Yet another SQL query builder for Node.js",
 	"main": "src/index.js",
 	"scripts": {
@@ -20,10 +20,10 @@
 	"devDependencies": {
 		"chai": "^3.5.0",
 		"eslint": "^3.18.0",
-		"mocha": "^3.2.0",
-		"squel": "^5.8.0"
+		"mocha": "^3.2.0"
 	},
 	"dependencies": {
-		"lme": "^1.5.1"
+		"lme": "^1.5.1",
+		"squel": "^5.8.0"
 	}
 }
