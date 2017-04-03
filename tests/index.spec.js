@@ -34,9 +34,9 @@ describe('Testing sqlify', function() {
 					'service_pricing_cost.service_pricing_currency'
 				],
 				join: [
-					['service_pricing', null, 'service_types.service_id = service_pricing.service_type'],
-					['service_pricing_sub', null, 'service_pricing.service_pricing_id = service_pricing_sub.service_pricing_id'],
-					['service_pricing_cost', null, 'service_pricing_sub.service_pricing_sub_id = service_pricing_cost.service_pricing_sub_id']
+                    ['service_pricing', null, 'service_types.service_id = service_pricing.service_type'],
+                    ['service_pricing_sub', null, 'service_pricing.service_pricing_id = service_pricing_sub.service_pricing_id'],
+                    ['service_pricing_cost', null, 'service_pricing_sub.service_pricing_sub_id = service_pricing_cost.service_pricing_sub_id']
 				],
 				where: {
 					'service_types.service_id': 'something',
@@ -68,16 +68,16 @@ describe('Testing sqlify', function() {
 			done();
 		});
 
-		it('case 3 (INSERT INTO embroidery_formats (format_title,format_ext,service_type VALUES(\'1\',\'2\',\'3\')RETURNING format_id)', function(done) {
+		it('case 3 (INSERT INTO embroidery_formats (format_title,format_ext,service_type VALUES(\'1\',\'2\',\'3\') RETURNING format_id)', function(done) {
 			var resource = {
 				set: {
-					format_title:'abc',
-					format_ext:'aa',
-					service_type:1
+					format_title: 'abc',
+					format_ext: 'aa',
+					service_type: 1
 				},
 				returning: ['format_id']
 			};
-			var chain =sql.insert().into('embroidery_formats');
+			var chain = sql.insert().into('embroidery_formats');
 			makeQuery(chain, resource);
 
 			var query = chain.toString();
