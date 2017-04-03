@@ -3,7 +3,7 @@
  * `resource` includes the data to build the query
  */
 var lme = require('lme');
-var squel = require('squel');
+var squel = require('squel').useFlavour('postgres');
 var handles = require('./handles');
 
 var key;
@@ -52,7 +52,7 @@ var sqlify = function (chain, resource) {
 				break;
 
 			case 'returning':
-				handles.cross_join(chain, resource[key]);
+				handles.returning(chain, resource[key]);
 				break;
 
 			default:

@@ -68,5 +68,22 @@ describe('Testing sqlify', function() {
 			done();
 		});
 
+		it('case 3 (INSERT INTO embroidery_formats (format_title,format_ext,service_type VALUES(\'1\',\'2\',\'3\')RETURNING format_id)', function(done) {
+			var resource = {
+				set: {
+					format_title:'abc',
+					format_ext:'aa',
+					service_type:1
+				},
+				returning: ['format_id']
+			};
+			var chain =sql.insert().into('embroidery_formats');
+			makeQuery(chain, resource);
+
+			var query = chain.toString();
+			expect(query).to.equal('INSERT INTO embroidery_formats (format_title, format_ext, service_type) VALUES (\'abc\', \'aa\', 1) RETURNING format_id');
+			done();
+		});
+
 	});
 });
