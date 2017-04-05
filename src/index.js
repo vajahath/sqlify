@@ -11,7 +11,7 @@ var sqlify = function(chain, resource) {
     // iterate through each properties of `resource`
 	Object.keys(resource).forEach(function(key) {
 		switch (key) {
-		case 'fields':
+		case 'field':
 			handles.field(chain, resource[key]);
 			break;
 

@@ -36,7 +36,7 @@ const sql = require('sqlify').squel;
 const sqlify = require('sqlify').sqlify;
 
 let resource = {
-  fields: ['name', 'age', 'address'],
+  field: ['name', 'age', 'address'],
   where: {
     name: 'Swat',
     age: 22
@@ -98,7 +98,7 @@ Example:
 ...
 
 let resource = {
-    fields: ['name', 'age', 'address'],
+    field: ['name', 'age', 'address'],
     where: {
         name: 'Swa',
         age: 22
@@ -107,7 +107,7 @@ let resource = {
 
 ...
 ```
-Where, the properties of `resource` object (in the above case, `fields` and `where`) are taken from the chain function names of the [squel](https://www.npmjs.com/package/squel). Use them accordingly.
+Where, the properties of `resource` object (in the above case, `field` and `where`) are taken from the chain function names of the [squel](https://www.npmjs.com/package/squel). Use them accordingly.
 
 #### Step 3: Sqlify
 ```js
@@ -139,7 +139,7 @@ lme.s(query);
 
 ---
 
-> This package currently supports `fields`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
+> This package currently supports `field`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
 
 ## Contributors
 

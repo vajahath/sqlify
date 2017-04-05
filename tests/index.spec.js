@@ -24,9 +24,9 @@ describe('Testing sqlify', function() {
 	});
 
 	describe('testing some actual scenarios >', function() {
-		it('case 1 (SELECT fields FROM table JOIN JOIN JOIN WHERE cond.)', function(done) {
+		it('case 1 (SELECT field FROM table JOIN JOIN JOIN WHERE cond.)', function(done) {
 			var resource = {
-				fields: [
+				field: [
 					'service_types.service_title',
 					'service_pricing.service_pricing_title',
 					'service_pricing_sub.service_pricing_sub_title',
@@ -50,9 +50,9 @@ describe('Testing sqlify', function() {
 			expect(query).to.equal('SELECT service_types.service_title, service_pricing.service_pricing_title, service_pricing_sub.service_pricing_sub_title, service_pricing_cost.service_pricing_cost, service_pricing_cost.service_pricing_currency FROM users INNER JOIN service_pricing ON (service_types.service_id = service_pricing.service_type) INNER JOIN service_pricing_sub ON (service_pricing.service_pricing_id = service_pricing_sub.service_pricing_id) INNER JOIN service_pricing_cost ON (service_pricing_sub.service_pricing_sub_id = service_pricing_cost.service_pricing_sub_id) WHERE (service_types.service_id=\'something\') AND (service_pricing_cost.service_pricing_currency=\'something else\')');
 			done();
 		});
-		it('case 2 (SELECT fields FROM table WHERE cond.)', function(done) {
+		it('case 2 (SELECT field FROM table WHERE cond.)', function(done) {
 			var resource = {
-				fields: [
+				field: [
 					'fabric_id',
 					'fabric_title'
 				],
