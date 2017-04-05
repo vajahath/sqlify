@@ -4,10 +4,7 @@
  */
 
 module.exports = function(chain, resource) {
-	for (var item in resource) {
-		if (!resource.hasOwnProperty(item)) {
-			continue;
-		}
+	Object.keys(resource).forEach(function(item) {
 		chain = chain.set(item, resource[item]);
-	}
+	});
 };

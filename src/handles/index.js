@@ -6,7 +6,7 @@ var left_join = require('./left-join');
 var right_join = require('./right-join');
 var outer_join = require('./outer-join');
 var cross_join = require('./cross-join');
-var returning = require('./return');
+var returning = require('./returning');
 
 module.exports = {
 	field: field,
@@ -17,5 +17,5 @@ module.exports = {
 	right_join: right_join,
 	outer_join: outer_join,
 	cross_join: cross_join,
-	returning :returning
+	returning: returning
 };
