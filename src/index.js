@@ -6,18 +6,10 @@ var lme = require('lme');
 var squel = require('squel').useFlavour('postgres');
 var handles = require('./handles');
 
-var key;
+var sqlify = function(chain, resource) {
 
-var sqlify = function (chain, resource) {
-	// refrain from sins
-	// sometimes if resource contains req.body, this is required to make clear object (as of now)
-	resource = JSON.parse(JSON.stringify(resource));
-
-	// iterate through each properties of `resource`
-	for (key in resource) {
-		if (!resource.hasOwnProperty(key)) {
-			continue;
-		}
+    // iterate through each properties of `resource`
+	Object.keys(resource).forEach(function(key) {
 		switch (key) {
 		case 'fields':
 			handles.field(chain, resource[key]);
@@ -59,7 +51,7 @@ var sqlify = function (chain, resource) {
 			lme.e('method ' + key + ' is not implemented');
 			break;
 		}
-	}
+	});
 };
 
 // expose squel and sqlify
