@@ -6,13 +6,9 @@ var appendingValue;
 var lme = require('lme');
 
 module.exports = function(chain, resource) {
-	for (var item in resource) {
-		if (!resource.hasOwnProperty(item)) {
-			continue;
-		}
-
+	Object.keys(resource).forEach(function(item) {
 		appendingValue = resource[item];
-		// modify appendingValue to include 's if necessary
+        // modify appendingValue to include 's if necessary
 		switch (typeof(resource[item])) {
 		case ('number'):
 		case ('boolean'):
@@ -25,5 +21,5 @@ module.exports = function(chain, resource) {
 			throw new Error('a type other than "string", "number", "boolean" encountered');
 		}
 		chain = chain.where(item + '=' + appendingValue);
-	}
+	});
 };

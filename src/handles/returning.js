@@ -4,7 +4,7 @@
  */
 
 module.exports = function(chain, resource) {
-    Object.keys(resource).forEach(function(item) {
-        chain = chain.returning(resource[item]);
-    });
+	Object.keys(resource).forEach(function(item) {
+		chain = chain.returning(resource[item]);
+	});
 };
