@@ -1,11 +1,8 @@
 ##### Yet another SQL query builder
 
-
-# THIS PACKAGE IS IN BETA
-> This package is in active development, APIS are subject to break. You are warned!
-
 [![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
 [![Known Vulnerabilities](https://snyk.io/test/npm/sqlify/badge.svg)](https://snyk.io/test/npm/sqlify)
+[![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
 
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
@@ -66,9 +63,10 @@ chain.toString() // => INSERT INTO users (name, age) VALUES ('Swat', 22)
 ```
 
 ## How?
-**This package is used along with [squel](https://www.npmjs.com/package/squel) package.**
 
-`sqlify` exposes a function which receives 2 arguments. They are:
+`sqlify` exposes a **function** and a **module** ([squel](https://www.npmjs.com/package/squel)).
+
+The function receives 2 arguments. They are:
 - `chain`
 - `resource`
 
@@ -141,11 +139,21 @@ lme.s(query);
 
 > This package currently supports `field`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
 
+### supported functions
+|            |            |      |           |            |
+|------------|------------|------|-----------|------------|
+| cross-join | field      | join | left-join | outer-join |
+| returning  | right-join | set  | where     |            |
+|            |            |      |           |            |
+
 ## Contributors
 
 - [Lakshmipriya](https://github.com/lakshmipriyamukundan)
 
 ## Change log
+- v2.0.0
+  - fixing [#5](https://github.com/vajahath/sqlify/issues/5) and [#2](https://github.com/vajahath/sqlify/issues/2).
+  - more squel functions
 - v1.0.4
   - bug fix with 's in select queries
 - v1.0.1, 1.0.2, 1.0.3
