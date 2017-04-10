@@ -12,7 +12,7 @@
 > **Sqlify v2.0** is out! **What's new?**
 > - more squel functions
 > - using same function names for `sqlify` and `squel`. ([#5](https://github.com/vajahath/sqlify/issues/5))
-> - addressing ((#3)[https://github.com/vajahath/sqlify/issues/3])
+> - addressing ([#3](https://github.com/vajahath/sqlify/issues/3))
 > - wrapping `squel` inside `sqlify` for better stability.
 > *(migrating to v2 is easier than you think. It just requires 2 mins, you bet!)*
 > [migration guide](#v1-to-v2-migration-guide)
