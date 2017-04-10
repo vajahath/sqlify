@@ -4,10 +4,18 @@
 [![Known Vulnerabilities](https://snyk.io/test/npm/sqlify/badge.svg)](https://snyk.io/test/npm/sqlify)
 [![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
 
-![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
-
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
+![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
+
+
+> **Sqlify v2.0** is out! **What's new?**
+> - more squel functions
+> - using same function names for `sqlify` and `squel`. ([#5](https://github.com/vajahath/sqlify/issues/5))
+> - addressing ((#3)[https://github.com/vajahath/sqlify/issues/3])
+> - wrapping `squel` inside `sqlify` for better stability.
+> *(migrating to v2 is easier than you think. It just requires 2 mins, you bet!)*
+> [migration guide](#v1-to-v2-migration-guide)
 
 ## Install
 ```bash
@@ -150,6 +158,23 @@ lme.s(query);
 
 - [Lakshmipriya](https://github.com/lakshmipriyamukundan)
 
+
+## v1 to v2 migration guide
+
+- **change the way you `require` the package:**
+  - in v1, you required `sqlify` along with `squel` as:
+    ```js
+	const sqlify = require('sqlify');
+	const squel = require('squel');
+	...
+	```
+  - in v2 you've to change that code into:
+    ```js
+	const sqlify = require('sqlify').sqlify;
+	const squel = require('sqlify').squel;
+	...
+	```
+- **change in function name:** change `fields:[]` to `field:[]` in the `resource` object.
 ## Change log
 - v2.0.0
   - fixing [#5](https://github.com/vajahath/sqlify/issues/5) and [#2](https://github.com/vajahath/sqlify/issues/2).
