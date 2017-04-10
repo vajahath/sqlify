@@ -137,7 +137,7 @@ lme.s(query);
 
 ---
 
-> This package currently supports `field`, `where` and `set`. These are the chain function names from [squel](https://www.npmjs.com/package/squel).<br><br> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
+> :green_heart: Find some time to contribute :star: to accommodate other functionalities from [squel](https://www.npmjs.com/package/squel).
 
 ### supported functions
 |            |            |      |           |            |
