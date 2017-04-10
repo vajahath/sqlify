@@ -1,0 +1,11 @@
+media/
+.jsbeautifyrc
+.eslintrc.yml
+.travis.yml
+test.js
+tests/
+.vscode/
+.editorconfig
+.eslintignore
+.gitignore
+.idea/

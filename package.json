@@ -1,22 +1,29 @@
 {
 	"name": "sqlify",
-	"version": "1.0.0",
-	"description": "Yet another sql query maker from object",
-	"main": "index.js",
+	"version": "2.0.0",
+	"description": "Yet another SQL query builder for Node.js",
+	"main": "src/index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "./node_modules/.bin/mocha ./tests --recursive",
+		"lint": "./node_modules/.bin/eslint . --fix"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/vajahath/sqlify.git"
 	},
 	"author": "",
-	"license": "ISC",
+	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/vajahath/sqlify/issues"
 	},
 	"homepage": "https://github.com/vajahath/sqlify#readme",
 	"devDependencies": {
+		"chai": "^3.5.0",
+		"eslint": "^3.18.0",
+		"mocha": "^3.2.0"
+	},
+	"dependencies": {
+		"lme": "^1.5.1",
 		"squel": "^5.8.0"
 	}
 }
