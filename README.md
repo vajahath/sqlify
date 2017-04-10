@@ -3,13 +3,11 @@
 [![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
 [![Known Vulnerabilities](https://snyk.io/test/npm/sqlify/badge.svg)](https://snyk.io/test/npm/sqlify)
 [![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
-
-> There are many sql query builders out there. But this one makes more sense to me :wink:.
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/make-query.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/sqlify.svg)](https://greenkeeper.io/)
 
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
+> There are many sql query builders out there. But this one makes more sense to me :wink:.
 
 > **Sqlify v2.0** is out! **What's new?**
 > - more squel functions
