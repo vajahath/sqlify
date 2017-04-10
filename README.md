@@ -6,6 +6,8 @@
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/make-query.svg)](https://greenkeeper.io/)
+
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
 
