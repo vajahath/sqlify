@@ -14,8 +14,8 @@
 > - using same function names for `sqlify` and `squel`. ([#5](https://github.com/vajahath/sqlify/issues/5))
 > - addressing ([#3](https://github.com/vajahath/sqlify/issues/3))
 > - wrapping `squel` inside `sqlify` for better stability.
-> *(migrating to v2 is easier than you think. It just requires 2 mins, you bet!)*
-> [migration guide](#v1-to-v2-migration-guide)
+> - *(migrating to v2 is easier than you think. It just requires 2 mins, you bet!)*
+>   <br>[**migration guide**](#v1-to-v2-migration-guide)
 
 ## Install
 ```bash
@@ -175,6 +175,8 @@ lme.s(query);
 	...
 	```
 - **change in function name:** change `fields:[]` to `field:[]` in the `resource` object.
+<br><br>*Oh yes! it's that simple.*
+
 ## Change log
 - v2.0.0
   - fixing [#5](https://github.com/vajahath/sqlify/issues/5) and [#2](https://github.com/vajahath/sqlify/issues/2).
