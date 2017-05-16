@@ -155,7 +155,7 @@ lme.s(query);
 |            |            |      |           |            |
 |------------|------------|------|-----------|------------|
 | cross-join | field      | join | left-join | outer-join |
-| returning  | right-join | set  | where     |            |
+| returning  | right-join | set  | where     | group      |
 |            |            |      |           |            |
 
 ## Contributors
