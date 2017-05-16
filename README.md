@@ -21,6 +21,10 @@
 ```bash
 npm install --save sqlify
 ```
+
+**Read [squel](https://hiddentao.com/squel)'s documentation along with this.**
+_This package is a wrapper around [squel](https://hiddentao.com/squel)_
+
 ## Why?
 - Helps you to build dynamic sql queries.
 - **Example use case:** suppose, you are getting a POST request to insert some data to your SQL database.
@@ -178,6 +182,9 @@ lme.s(query);
 <br><br>*Oh yes! it's that simple.*
 
 ## Change log
+- v2.0.1
+  - adds `group` function from [squel-group](https://hiddentao.com/squel/api.html#select_group)
+  - better docs
 - v2.0.0
   - fixing [#5](https://github.com/vajahath/sqlify/issues/5) and [#2](https://github.com/vajahath/sqlify/issues/2).
   - more squel functions

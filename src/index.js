@@ -8,7 +8,7 @@ var handles = require('./handles');
 
 var sqlify = function(chain, resource) {
 
-    // iterate through each properties of `resource`
+	// iterate through each properties of `resource`
 	Object.keys(resource).forEach(function(key) {
 		switch (key) {
 		case 'field':
@@ -45,6 +45,10 @@ var sqlify = function(chain, resource) {
 
 		case 'returning':
 			handles.returning(chain, resource[key]);
+			break;
+
+		case 'group':
+			handles.group(chain, resource[key]);
 			break;
 
 		default:

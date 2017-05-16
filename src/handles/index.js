@@ -7,8 +7,10 @@ var right_join = require('./right-join');
 var outer_join = require('./outer-join');
 var cross_join = require('./cross-join');
 var returning = require('./returning');
+var group = require('./group');
 
 module.exports = {
+	group: group,
 	field: field,
 	where: where,
 	set: set,

@@ -34,9 +34,9 @@ describe('Testing sqlify', function() {
 					'service_pricing_cost.service_pricing_currency'
 				],
 				join: [
-                    ['service_pricing', null, 'service_types.service_id = service_pricing.service_type'],
-                    ['service_pricing_sub', null, 'service_pricing.service_pricing_id = service_pricing_sub.service_pricing_id'],
-                    ['service_pricing_cost', null, 'service_pricing_sub.service_pricing_sub_id = service_pricing_cost.service_pricing_sub_id']
+					['service_pricing', null, 'service_types.service_id = service_pricing.service_type'],
+					['service_pricing_sub', null, 'service_pricing.service_pricing_id = service_pricing_sub.service_pricing_id'],
+					['service_pricing_cost', null, 'service_pricing_sub.service_pricing_sub_id = service_pricing_cost.service_pricing_sub_id']
 				],
 				where: {
 					'service_types.service_id': 'something',
@@ -82,6 +82,40 @@ describe('Testing sqlify', function() {
 
 			var query = chain.toString();
 			expect(query).to.equal('INSERT INTO embroidery_formats (format_title, format_ext, service_type) VALUES (\'abc\', \'aa\', 1) RETURNING format_id');
+			done();
+		});
+
+		it('case 4 GROUP BY: (SELECT fabric_id, fabric_title FROM fabrics GROUP BY fabric_id)', function(done) {
+			var resource = {
+				field: [
+					'fabric_id',
+					'fabric_title'
+				],
+				group: ['fabric_id']
+			};
+			var chain = sql.select().from('fabrics');
+			makeQuery(chain, resource);
+
+			var query = chain.toString();
+			// lme.w(query);
+			expect(query).to.equal('SELECT fabric_id, fabric_title FROM fabrics GROUP BY fabric_id');
+			done();
+		});
+
+		it('case 5 GROUP BY: (INSERT INTO embroidery_formats (format_title,format_ext,service_type VALUES(\'1\',\'2\',\'3\') RETURNING format_id)', function(done) {
+			var resource = {
+				field: [
+					'name',
+					'age'
+				],
+				group: ['name', 'age']
+			};
+			var chain = sql.select().from('fabrics');
+			makeQuery(chain, resource);
+
+			var query = chain.toString();
+			// lme.w(query);
+			expect(query).to.equal('SELECT name, age FROM fabrics GROUP BY name, age');
 			done();
 		});
 
