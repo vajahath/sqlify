@@ -1,6 +1,6 @@
 {
 	"name": "sqlify",
-	"version": "2.1.1",
+	"version": "2.2.0",
 	"description": "Yet another SQL query builder for Node.js",
 	"main": "src/index.js",
 	"scripts": {
@@ -11,7 +11,7 @@
 		"type": "git",
 		"url": "git+https://github.com/vajahath/sqlify.git"
 	},
-	"author": "",
+	"author": "Vajahath Ahmed <vajuoff.1@gmail.com> (http://twitter.com/vajahath7)",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/vajahath/sqlify/issues"
@@ -25,5 +25,8 @@
 	"dependencies": {
 		"lme": "^1.5.1",
 		"squel": "^5.8.0"
-	}
+	},
+	"contributors": [
+		"Lakshmipriya Mukundan (https://github.com/lakshmipriyamukundan)"
+	]
 }
