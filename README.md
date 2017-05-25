@@ -9,12 +9,13 @@
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
-> **Sqlify v2.2** is out! **What's new?**
+> **Sqlify v2.3** is out! **What's new?**
+> - better error handling
 > - more squel functions (`order`, `group`)
 > - using same function names for `sqlify` and `squel`. ([#5](https://github.com/vajahath/sqlify/issues/5))
 > - addressing ([#3](https://github.com/vajahath/sqlify/issues/3))
 > - wrapping `squel` inside `sqlify` for better stability.
-> - *(migrating to v2 is easier than you think. It just requires 2 mins, you bet!)*
+> - *(migrating from v1 to v2 is easier than you think. It just requires 2 mins, you bet!)*
 >   <br>[**migration guide**](#v1-to-v2-migration-guide)
 
 ## Install
@@ -183,6 +184,8 @@ lme.s(query);
 <br><br>*Oh yes! it's that simple.*
 
 ## Change log
+- v2.3.0
+  - adds better error handling: (if an unsupported method is used, sqlify throws an err)
 - v2.2.0
   - adds `order` function from [squel-order](https://hiddentao.com/squel/api.html#select_order)
   - better docs
