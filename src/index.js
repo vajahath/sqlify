@@ -51,6 +51,10 @@ var sqlify = function(chain, resource) {
 			handles.group(chain, resource[key]);
 			break;
 
+		case 'order':
+			handles.order(chain, resource[key]);
+			break;
+
 		default:
 			lme.e('method ' + key + ' is not implemented');
 			break;

@@ -8,6 +8,7 @@ var outer_join = require('./outer-join');
 var cross_join = require('./cross-join');
 var returning = require('./returning');
 var group = require('./group');
+var order = require('./order');
 
 module.exports = {
 	group: group,
@@ -19,5 +20,6 @@ module.exports = {
 	right_join: right_join,
 	outer_join: outer_join,
 	cross_join: cross_join,
-	returning: returning
+	returning: returning,
+	order: order
 };
