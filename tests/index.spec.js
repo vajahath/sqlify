@@ -163,7 +163,7 @@ describe('Testing sqlify', function() {
 			// makeQuery(chain, resource);
 			// lme.w(query);
 			expect(function() {
-				makeQuery(chain, resource)
+				makeQuery(chain, resource);
 			}).to.throw(Error);
 			done();
 		});
