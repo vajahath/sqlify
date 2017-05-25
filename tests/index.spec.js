@@ -143,5 +143,29 @@ describe('Testing sqlify', function() {
 			done();
 		});
 
+		it('case 7 ERR handling', function(done) {
+			var resource = {
+				field: [
+					'id'
+				],
+				order: [{
+					field: 'id',
+					asc: true
+				}, {
+					field: 'name',
+					asc: false
+				}, {
+					field: 'age',
+				}],
+				blabla: ['he', 'he']
+			};
+			var chain = sql.select().from('students');
+			// makeQuery(chain, resource);
+			// lme.w(query);
+			expect(function() {
+				makeQuery(chain, resource)
+			}).to.throw(Error);
+			done();
+		});
 	});
 });
