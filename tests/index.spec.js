@@ -119,5 +119,29 @@ describe('Testing sqlify', function() {
 			done();
 		});
 
+		it('case 6 ORDER BY: (SELECT id FROM students ORDER BY id ASC, name ASC, age ASC)', function(done) {
+			var resource = {
+				field: [
+					'id'
+				],
+				order: [{
+					field: 'id',
+					asc: true
+				}, {
+					field: 'name',
+					asc: false
+				}, {
+					field: 'age',
+				}]
+			};
+			var chain = sql.select().from('students');
+			makeQuery(chain, resource);
+
+			var query = chain.toString();
+			// lme.w(query);
+			expect(query).to.equal('SELECT id FROM students ORDER BY id ASC, name DESC, age ASC');
+			done();
+		});
+
 	});
 });
