@@ -5,9 +5,10 @@
 [![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
 <!--[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/sqlify.svg)](https://greenkeeper.io/)-->
 
+> There are many sql query builders out there. But this one makes more sense to me :wink:.
+
 ![](https://raw.githubusercontent.com/vajahath/sqlify/master/media/sqlify.png)
 
-> There are many sql query builders out there. But this one makes more sense to me :wink:.
 
 > **Sqlify v2.3** is out! **What's new?**
 > - better error handling
@@ -15,10 +16,7 @@
 > - *(migrating from v1 to v2 is easier than you think. It just requires 2 mins, you bet!)*
 >   <br>[**migration guide**](#v1-to-v2-migration-guide)
 
-<br>
-<br>
-
-> This package is bound to strictly follow :flags: [Semantic Versioning](http://semver.org/)
+*:flags: This package is bound to strictly follow [Semantic Versioning](http://semver.org/)*
 
 ## Install
 ```bash
