@@ -9,8 +9,8 @@
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
-> **Sqlify v2.0** is out! **What's new?**
-> - more squel functions
+> **Sqlify v2.2** is out! **What's new?**
+> - more squel functions (`order`, `group`)
 > - using same function names for `sqlify` and `squel`. ([#5](https://github.com/vajahath/sqlify/issues/5))
 > - addressing ([#3](https://github.com/vajahath/sqlify/issues/3))
 > - wrapping `squel` inside `sqlify` for better stability.
@@ -156,6 +156,7 @@ lme.s(query);
 |------------|------------|------|-----------|------------|
 | cross-join | field      | join | left-join | outer-join |
 | returning  | right-join | set  | where     | group      |
+| order      |            |      |           |            |
 |            |            |      |           |            |
 
 ## Contributors
@@ -182,7 +183,10 @@ lme.s(query);
 <br><br>*Oh yes! it's that simple.*
 
 ## Change log
-- v2.0.1
+- v2.2.0
+  - adds `order` function from [squel-order](https://hiddentao.com/squel/api.html#select_order)
+  - better docs
+- v2.1.1
   - adds `group` function from [squel-group](https://hiddentao.com/squel/api.html#select_group)
   - better docs
 - v2.0.0
