@@ -1,9 +1,11 @@
-##### Yet another SQL query builder
+# Sqlify
+Yet another SQL query builder
 
+[![npm](https://img.shields.io/npm/v/sqlify.svg)](https://www.npmjs.com/package/sqlify)
 [![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
 [![Known Vulnerabilities](https://snyk.io/test/npm/sqlify/badge.svg)](https://snyk.io/test/npm/sqlify)
 [![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
-<!--[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/sqlify.svg)](https://greenkeeper.io/)-->
+[![npm](https://img.shields.io/npm/dt/sqlify.svg)](https://www.npmjs.com/package/sqlify)
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
@@ -16,7 +18,9 @@
 > - *(migrating from v1 to v2 is easier than you think. It just requires 2 mins, you bet!)*
 >   <br>[**migration guide**](#v1-to-v2-migration-guide)
 
-*:flags: This package is bound to strictly follow [Semantic Versioning](http://semver.org/)*
+*:flags: This package is bound to strictly follow [Semantic Versioning](http://semver.org/).*
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/sqlify.svg)](https://greenkeeper.io/)
 
 ## Install
 ```bash
@@ -182,8 +186,12 @@ lme.s(query);
 	```
 - **change in function name:** change `fields:[]` to `field:[]` in the `resource` object.
 <br><br>*Oh yes! it's that simple.*
+<br><br>
+Just in case if you liked this package, &nbsp; [![PayPal][badge_paypal_donate]][paypal-donations]
 
 ## Change log
+- v2.3.1
+  - enabling Greeenkeeper, better docs
 - v2.3.0
   - adds better error handling: (if an unsupported method is used, sqlify throws an err)
 - v2.2.0
@@ -207,3 +215,6 @@ lme.s(query);
 
 ## Licence
 MIT © [Vajahath Ahmed](https://twitter.com/vajahath7)
+
+[badge_paypal_donate]: https://cdn.rawgit.com/vajahath/cloud-codes/a01f087f/badges/paypal_donate.svg
+[paypal-donations]: https://paypal.me/vajahath
