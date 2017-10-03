@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"chai": "^4.0.2",
 		"eslint": "^3.18.0",
-		"mocha": "^3.2.0"
+		"mocha": "^4.0.0"
 	},
 	"dependencies": {
 		"lme": "^1.5.1",
