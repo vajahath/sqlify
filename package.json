@@ -1,32 +1,58 @@
 {
-	"name": "sqlify",
-	"version": "2.3.1",
-	"description": "Yet another SQL query builder for Node.js",
-	"main": "src/index.js",
-	"scripts": {
-		"test": "./node_modules/.bin/mocha ./tests --recursive",
-		"lint": "./node_modules/.bin/eslint . --fix"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/vajahath/sqlify.git"
-	},
-	"author": "Vajahath Ahmed <vajuoff.1@gmail.com> (http://twitter.com/vajahath7)",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/vajahath/sqlify/issues"
-	},
-	"homepage": "https://github.com/vajahath/sqlify#readme",
-	"devDependencies": {
-		"chai": "^4.0.2",
-		"eslint": "^3.18.0",
-		"mocha": "^3.2.0"
-	},
-	"dependencies": {
-		"lme": "^1.5.1",
-		"squel": "^5.8.0"
-	},
-	"contributors": [
-		"Lakshmipriya Mukundan (https://github.com/lakshmipriyamukundan)"
-	]
+    "name": "sqlify",
+    "version": "2.4.0",
+    "description": "Yet another SQL query builder for Node.js",
+    "main": "dist/index.js",
+    "typings": "index.d.ts",
+    "scripts": {
+        "prepublishOnly": "ts-node accessories/prepublish-log.ts && npm run build",
+        "build": "ts-node accessories/building-log.ts && npm run clean-build && npm run lint && ts-node accessories/real-build-log.ts && tsc && npm run copy-json",
+        "lint": "ts-node accessories/formatting-log.ts && prettier --use-tabs --single-quote --tab-width 4 --write src/**/* typings/**/* tests/**/* && ts-node accessories/linting-log.ts && tslint -c tslint.json -p tsconfig.json -t stylish --fix src/**/*",
+        "lint-noFix": "ts-node accessories/lint-noFix-log.ts && prettier --use-tabs --single-quote --tab-width 4 src/**/* typings/**/* tests/**/* && tslint -c tslint.json -p tsconfig.json -t stylish src/**/*",
+        "test": "ts-node accessories/test-log.ts && cross-env NODE_ENV=test mocha tests/ --compilers ts:ts-node/register,tsx:ts-node/register --recursive --reporter spec",
+        "test-watch": "ts-node accessories/test-watch-log.ts && cross-env NODE_ENV=test mocha tests/ --compilers ts:ts-node/register,tsx:ts-node/register --recursive --reporter spec --watch",
+        "preCommit-msg": "ts-node accessories/pre-commit-log.ts",
+        "copy-json": "gulp copy-json",
+        "clean-build": "gulp clean-build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vajahath/sqlify.git"
+    },
+    "author": "Vajahath Ahmed <vajuoff.1@gmail.com> (http://twitter.com/vajahath7)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vajahath/sqlify/issues"
+    },
+    "homepage": "https://github.com/vajahath/sqlify#readme",
+    "dependencies": {
+        "lme": "^1.5.1",
+        "squel": "^5.8.0"
+    },
+    "contributors": [
+        "Lakshmipriya Mukundan (https://github.com/lakshmipriyamukundan)"
+    ],
+    "devDependencies": {
+        "@types/chai": "^4.0.1",
+        "@types/del": "^3.0.0",
+        "@types/gulp": "^4.0.4",
+        "@types/mocha": "^2.2.41",
+        "@types/node": "^8.0.5",
+        "chai": "^4.1.0",
+        "concurrently": "^3.5.0",
+        "cross-env": "^5.0.1",
+        "mocha": "^3.4.2",
+        "pre-commit": "^1.2.2",
+        "prettier": "^1.5.3",
+        "ts-node": "^3.3.0",
+        "tslint": "^5.5.0",
+        "typescript": "^2.4.2",
+        "gulp": "^3.9.1",
+        "gulp-cli": "^1.4.0",
+        "del": "^3.0.0"
+    },
+    "pre-commit": [
+        "preCommit-msg",
+        "lint-noFix"
+    ]
 }
