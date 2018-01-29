@@ -3,11 +3,11 @@
  * https://hiddentao.com/squel/api.html#select_where
  */
 
-import { Resource } from '../Resource';
+import { WhereObj } from '../WhereObj';
 
 let appendingValue = '';
 
-export const where = (chain: any, resource: Resource['where']) => {
+export const where = (chain: any, resource: WhereObj) => {
 	Object.keys(resource).forEach(item => {
 		appendingValue = resource[item];
 		// modify appendingValue to include 's if necessary
