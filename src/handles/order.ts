@@ -5,7 +5,7 @@
 import { Resource } from '../Resource';
 
 export const order = (chain: any, resource: Resource['order']) => {
-	resource.forEach((item) => {
+	resource.forEach(item => {
 		chain = chain.order(item.field, item.asc);
 	});
 };

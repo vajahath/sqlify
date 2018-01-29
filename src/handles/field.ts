@@ -6,7 +6,7 @@
 import { Resource } from '../Resource';
 
 export const field = (chain: any, resource: Resource['field']) => {
-	resource.forEach((item) => {
+	resource.forEach(item => {
 		chain = chain.field(item);
 	});
 };

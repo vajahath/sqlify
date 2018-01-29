@@ -5,7 +5,7 @@
 import { Resource } from '../Resource';
 
 export const outer_join = (chain: any, resource: Resource['outer_join']) => {
-	resource.forEach((item) => {
+	resource.forEach(item => {
 		chain = chain.outer_join(item[0], item[1], item[2]);
 	});
 };

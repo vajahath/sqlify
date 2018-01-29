@@ -5,7 +5,7 @@
 import { Resource } from '../Resource';
 
 export const group = (chain: any, resource: Resource['group']) => {
-	resource.forEach((item) => {
+	resource.forEach(item => {
 		chain = chain.group(item);
 	});
 };

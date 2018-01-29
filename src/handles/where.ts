@@ -8,7 +8,7 @@ import { Resource } from '../Resource';
 let appendingValue = '';
 
 export const where = (chain: any, resource: Resource['where']) => {
-	Object.keys(resource).forEach((item) => {
+	Object.keys(resource).forEach(item => {
 		appendingValue = resource[item];
 		// modify appendingValue to include 's if necessary
 		switch (typeof resource[item]) {
