@@ -12,7 +12,7 @@ const squel = squelLib.useFlavour('postgres');
 
 export const sqlify = (chain: any, resource: Resource) => {
 	// iterate through each properties of `resource`
-	Object.keys(resource).forEach((key) => {
+	Object.keys(resource).forEach(key => {
 		switch (key) {
 			case 'field':
 				handles.field(chain, resource[key]);
