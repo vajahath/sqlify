@@ -1,5 +1,8 @@
 {
-    "cSpell.words": [
-        "sqlify"
-    ]
+	"tslint.exclude": ["**/node_modules/**", "**/.roughs/**"],
+	"prettier.eslintIntegration": false,
+	"cSpell.words": [
+		"sqlify",
+	],
+	"cSpell.language": "en"
 }
