@@ -1,5 +1,6 @@
-.idea/
-.vscode/
+mocha-insights/
+credentials/
+dist/
 
 # Logs
 logs
