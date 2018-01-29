@@ -3,7 +3,7 @@
     "version": "2.4.0",
     "description": "Yet another SQL query builder for Node.js",
     "main": "dist/index.js",
-    "typings": "dist/index.d.ts",
+    "typings": "dist/typings/index.d.ts",
     "scripts": {
         "prepublishOnly": "ts-node accessories/prepublish-log.ts && npm run build",
         "test": "ts-node accessories/test-log.ts && cross-env NODE_ENV=test mocha tests/ --compilers ts:ts-node/register,tsx:ts-node/register --recursive --reporter spec",
