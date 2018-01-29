@@ -32,7 +32,6 @@
     },
     "homepage": "https://github.com/vajahath/sqlify#readme",
     "dependencies": {
-        "lme": "^1.5.1",
         "squel": "^5.8.0"
     },
     "contributors": [
@@ -50,6 +49,7 @@
         "del": "^3.0.0",
         "gulp": "^3.9.1",
         "gulp-cli": "^1.4.0",
+        "lme": "^1.5.3",
         "mocha": "^3.4.2",
         "pre-commit": "^1.2.2",
         "prettier": "^1.5.3",
