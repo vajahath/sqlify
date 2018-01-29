@@ -8,6 +8,7 @@
 		"outDir": "dist",
 		"baseUrl": ".",
 		"declaration": true,
+		"declarationDir": "./",
 		"paths": {
 			"*": ["node_modules/*", "typings/*"]
 		}
