@@ -16,7 +16,7 @@ export const where = (chain: any, resource: Resource['where']) => {
 			case 'boolean':
 				break;
 			case 'string':
-				appendingValue = '\'' + appendingValue + '\'';
+				appendingValue = `'${appendingValue}'`;
 				break;
 			default:
 				throw new Error(
