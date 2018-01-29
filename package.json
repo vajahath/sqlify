@@ -32,7 +32,7 @@
     },
     "homepage": "https://github.com/vajahath/sqlify#readme",
     "dependencies": {
-        "squel": "^5.8.0"
+        "squel": "^5.12.0"
     },
     "contributors": [
         "Lakshmipriya Mukundan (https://github.com/lakshmipriyamukundan)"
@@ -63,5 +63,27 @@
     ],
     "keywords": [
         "sql", "squel", "postgres", "mysql", "database", "query"
-    ]
+    ],
+    "greenkeeper":{
+        "ignore":[
+        "@types/chai",
+        "@types/del",
+        "@types/gulp",
+        "@types/mocha",
+        "@types/node",
+        "chai",
+        "concurrently",
+        "cross-env",
+        "del",
+        "gulp",
+        "gulp-cli",
+        "lme",
+        "mocha",
+        "pre-commit",
+        "prettier",
+        "ts-node",
+        "tslint",
+        "typescript"
+        ]
+    }
 }
