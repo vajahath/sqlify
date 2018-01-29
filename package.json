@@ -60,5 +60,8 @@
     "pre-commit": [
         "preCommit-msg",
         "lint-noFix"
+    ],
+    "keywords": [
+        "sql", "squel", "postgres", "mysql", "database", "query"
     ]
 }
