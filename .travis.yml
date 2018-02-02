@@ -2,6 +2,15 @@ sudo: false
 language: node_js
 node_js:
   - "node"
+  - "lts/*"
   - "6"
 script:
-  - npm run lint && npm run test
+  - npm run lint
+  - npm run test
+
+deploy:
+  provider: npm
+  email: "vajuoff.1@gmail.com"
+  api_key: "YOUR_AUTH_TOKEN"
+  on:
+    tags: true
