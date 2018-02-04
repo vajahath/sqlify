@@ -1,11 +1,14 @@
 /* tslint:disable: no-unused-expression arrow-parens */
 
-import { expect } from 'chai';
-import { Resource, sqlify as makeQuery, squel as sql } from './../src';
+const { expect } = require('chai');
+const { sqlify, squel } = require('./../dist');
 
-describe('Testing sqlify For TS', () => {
+const makeQuery = sqlify;
+const sql = squel;
+
+describe('Testing sqlify For JS', () => {
 	it('should make good query (type 2: INSERT)', done => {
-		const resource: Resource = {
+		const resource = {
 			set: {
 				age: 44,
 				girl: true,
@@ -24,7 +27,7 @@ describe('Testing sqlify For TS', () => {
 
 	describe('testing some actual scenarios >', () => {
 		it('case 1 (SELECT field FROM table JOIN JOIN JOIN WHERE cond.)', done => {
-			const resource: Resource = {
+			const resource = {
 				field: [
 					'service_types.service_title',
 					'service_pricing.service_pricing_title',
@@ -66,7 +69,7 @@ describe('Testing sqlify For TS', () => {
 			done();
 		});
 		it('case 2 (SELECT field FROM table WHERE cond.)', done => {
-			const resource: Resource = {
+			const resource = {
 				field: ['fabric_id', 'fabric_title'],
 				where: {
 					'fabrics.fabric_type': 'something',
@@ -83,7 +86,7 @@ describe('Testing sqlify For TS', () => {
 		});
 		// tslint:disable-next-line
 		it(`case 3 (INSERT INTO embroidery_formats (format_title,format_ext,service_type VALUES('1','2','3') RETURNING format_id)`, done => {
-			const resource: Resource = {
+			const resource = {
 				set: {
 					format_title: 'abc',
 					format_ext: 'aa',
@@ -103,7 +106,7 @@ describe('Testing sqlify For TS', () => {
 		});
 
 		it('case 4 GROUP BY: (SELECT fabric_id, fabric_title FROM fabrics GROUP BY fabric_id)', done => {
-			const resource: Resource = {
+			const resource = {
 				field: ['fabric_id', 'fabric_title'],
 				group: ['fabric_id'],
 			};
@@ -120,7 +123,7 @@ describe('Testing sqlify For TS', () => {
 
 		// tslint:disable-next-line
 		it(`case 5 GROUP BY: (INSERT INTO embroidery_formats (format_title,format_ext,service_type VALUES('1','2','3') RETURNING format_id)`, done => {
-			const resource: Resource = {
+			const resource = {
 				field: ['name', 'age'],
 				group: ['name', 'age'],
 			};
@@ -136,7 +139,7 @@ describe('Testing sqlify For TS', () => {
 		});
 
 		it('case 6 ORDER BY: (SELECT id FROM students ORDER BY id ASC, name ASC, age ASC)', done => {
-			const resource: Resource = {
+			const resource = {
 				field: ['id'],
 				order: [
 					{

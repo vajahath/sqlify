@@ -4,10 +4,14 @@ node_js:
   - "node"
   - "lts/*"
   - "6"
+
 script:
   - npm run lint
+  - npm run build
   - npm run test
 
+before_deploy:
+  - npm run build
 deploy:
   provider: npm
   email: "vajuoff.1@gmail.com"
