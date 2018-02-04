@@ -264,7 +264,6 @@ The following fields can be used inside the `resource` object. Logic behind the 
 * **change in function name:** change `fields:[]` to `field:[]` in the `resource` object.
   <br><br>*Oh yes! it's that simple.*
   <br><br>
-  Just in case if you liked this package, &nbsp; [![PayPal][badge_paypal_donate]][paypal-donations]
 
 ## Change log
 
