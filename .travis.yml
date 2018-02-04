@@ -11,6 +11,6 @@ script:
 deploy:
   provider: npm
   email: "vajuoff.1@gmail.com"
-  api_key: "YOUR_AUTH_TOKEN"
+  api_key: "hAEGsxGJks2rkTUqiAA4Sbgb6ikPE9yyXqMCh9YMsIEyD/dzdBUoJ5Tfu+UU4Y+TZ12rhNDq94vQG6VwTMcPEMXuaMEzXBXHhkvkBjA2ahvq9DsvkvF1J6i9A0SGV/xAp86s4fnhbT+pdBxQI/sA2zgyl9R9CWrP7sAm39AorWiMJ94ixqPuQE3S1CUZwrLkLkoeF/49KH8kp2q6Zznv6IH1iJgc8cT16NdXocdyPKWI43BgQ/a3EcBufOn9Hvjg6NQMR4j+PD0fi/cDetrhbKiwXEoMgCvk0ov/h5nrqjlUM1R9JXUgKCTENpo2NTdt1NPDQpq1bJWUy97vW6Ae0HRC5tC8nKsqtihcNtYZaDbo79TtQ+eplV5PzAOM1DxdviQ5Kc4tXd4YmCRUbPAkllNGh7BQKg0st1IXAUhsuWsJ/F2KvtnOkupykvpx2JuHgTV9lVPfAdww+MoVo2UDotkFEZD/XOzftSK5txw+0f2oSkHX9X63slQhWNs0tBs0XUyNZJ4ysus5r++TpGfMzk+zdhUy1SjdCV8ak9Wx514+QhiKMOo2spWJf1XQy41A56gcq94OEcbNgpJE6fNowIz1N5FHx33jv++MzCrMgEPy4/pB1mdtpfpiG89pOGHN3ktCKMhSbaYMg03lsSHEz4S5sWiZ5z89hR2w+QmIWdg="
   on:
     tags: true
