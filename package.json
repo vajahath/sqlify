@@ -15,8 +15,8 @@
         "preCommit-msg": "ts-node accessories/pre-commit-log.ts",
         "copy-assets": "gulp copy-assets",
         "clean-build": "gulp clean-build",
-        "prettier-noFix": "prettier '{src/**/*.*,typings/**/*.*,tests/**/*.*}'",
-        "prettier": "prettier '{src/**/*.*,typings/**/*.*,tests/**/*.*}' --write",
+        "prettier-noFix": "prettier \"{src/**/*.*,typings/**/*.*,tests/**/*.*}\"",
+        "prettier": "prettier \"{src/**/*.*,typings/**/*.*,tests/**/*.*}\" --write",
         "tslint-noFix": "tslint -c tslint.json -p tsconfig.json -t stylish 'src/**/*.ts'",
         "tslint": "tslint -c tslint.json -p tsconfig.json -t stylish --fix 'src/**/*.ts'",
         "compile": "tsc"
