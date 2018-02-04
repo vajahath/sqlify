@@ -3,6 +3,7 @@
 	"prettier.eslintIntegration": false,
 	"cSpell.words": [
 		"sqlify",
+		"squel"
 	],
 	"cSpell.language": "en"
 }
