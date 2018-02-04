@@ -5,6 +5,8 @@ Yet another SQL query builder.
 [![npm](https://img.shields.io/npm/v/sqlify.svg)](https://www.npmjs.com/package/sqlify)
 [![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
 [![T](https://img.shields.io/badge/TypeScript%20Ready-.d.ts%20included-blue.svg)]()
+[![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
+[![npm](https://img.shields.io/npm/dt/sqlify.svg)](https://www.npmjs.com/package/sqlify)
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
 
