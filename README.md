@@ -36,7 +36,7 @@ npm install --save sqlify
     sqlify(chain, resource); // done!
     ```
 
-> Warning ⚠: Do not ever pass queries generated on the client side to your web server for execution. The above example is only a use case. Do NOT copy paste as such.
+> Warning ⚠️: Do not ever pass queries generated on the client side to your web server for execution. The above example is only a use case. Do NOT copy paste as such.
 
 ## Examples
 
