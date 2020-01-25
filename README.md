@@ -3,9 +3,8 @@
 Yet another SQL query builder.
 
 [![npm](https://img.shields.io/npm/v/sqlify.svg)](https://www.npmjs.com/package/sqlify)
-[![Build Status](https://travis-ci.org/vajahath/sqlify.svg?branch=master)](https://travis-ci.org/vajahath/sqlify)
+![Build Status](https://github.com/vajahath/sqlify/workflows/Build/badge.svg) 
 [![T](https://img.shields.io/badge/TypeScript%20Ready-.d.ts%20included-blue.svg)]()
-[![Gitter chat](https://badges.gitter.im/npm-sqlify/gitter.png)](https://gitter.im/npm-sqlify/Lobby)
 [![npm](https://img.shields.io/npm/dt/sqlify.svg)](https://www.npmjs.com/package/sqlify)
 
 > There are many sql query builders out there. But this one makes more sense to me :wink:.
@@ -20,7 +19,7 @@ npm install --save sqlify
 
 ## Why
 
-* This package is a wrapper around [squel](https://hiddentao.com/squel) module to make it more friendly.
+* This package is a wrapper around [squel](https://hiddentao.com/squel) module to make it more friendly. (Check that package to know its maintenance status)
 * Helps you to build dynamic sql queries.
 * **Example use case:** suppose, you are getting a POST request to insert some data to your SQL database.
   You'll get the data in `req.body` as `{name: "Swat", age: 22, address: "ND"}`.
@@ -36,6 +35,8 @@ npm install --save sqlify
 
     sqlify(chain, resource); // done!
     ```
+
+> Warning ⚠️: Do not ever pass queries generated on the client side to your web server for execution. The above example is only a use case. Do NOT copy paste as such.
 
 ## Examples
 
@@ -267,6 +268,8 @@ The following fields can be used inside the `resource` object. Logic behind the 
 
 ## Change log
 
+* v2.5.0
+  * Security Update
 * v2.4.0
   * TypeScript support and definitions
   * Better docs
