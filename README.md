@@ -269,7 +269,7 @@ The following fields can be used inside the `resource` object. Logic behind the 
 
 ## Change log
 
-* v2.5.0, v2.5.1
+* v2.5.0, v2.5.1, v2.5.2
   * Security Update
 * v2.4.0
   * TypeScript support and definitions
