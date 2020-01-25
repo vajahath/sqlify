@@ -43,6 +43,7 @@
         "@types/gulp": "^4.0.4",
         "@types/mocha": "^2.2.41",
         "@types/node": "^8.0.5",
+        "@vaju/npm-scope-prefixer": "^1.2.0",
         "chai": "^4.1.0",
         "concurrently": "^3.5.0",
         "cross-env": "^5.0.1",
