@@ -1,6 +1,6 @@
 {
     "name": "sqlify",
-    "version": "2.5.0",
+    "version": "2.5.1",
     "description": "Yet another SQL query builder for Node.js",
     "main": "dist/index.js",
     "typings": "dist/typings/index.d.ts",
