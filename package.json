@@ -6,7 +6,7 @@
     "typings": "dist/typings/index.d.ts",
     "scripts": {
         "prepublishOnly": "ts-node accessories/prepublish-log.ts && npm run build",
-        "test": "ts-node accessories/test-log.ts && cross-env NODE_ENV=test mocha tests/ --compilers ts:ts-node/register,tsx:ts-node/register --recursive --reporter spec",
+        "test": "ts-node accessories/test-log.ts && cross-env NODE_ENV=test mocha tests/*.ts --require ts-node/register --recursive --reporter spec",
         "test-watch": "ts-node accessories/test-watch-log.ts && cross-env NODE_ENV=test mocha tests/ --compilers ts:ts-node/register,tsx:ts-node/register --recursive --reporter spec --watch",
         "build": "ts-node accessories/building-log.ts && npm run clean-build && npm run lint && ts-node accessories/real-build-log.ts && npm run compile && npm run copy-assets",
         "lint-noFix": "ts-node accessories/lint-noFix-log.ts && npm run prettier-noFix && npm run tslint-noFix",
@@ -38,7 +38,7 @@
         "Lakshmipriya Mukundan (https://github.com/lakshmipriyamukundan)"
     ],
     "devDependencies": {
-        "@types/chai": "^4.0.1",
+        "@types/chai": "^4.2.7",
         "@types/del": "^3.0.0",
         "@types/gulp": "^4.0.4",
         "@types/mocha": "^2.2.41",
@@ -47,43 +47,48 @@
         "concurrently": "^3.5.0",
         "cross-env": "^5.0.1",
         "del": "^3.0.0",
-        "gulp": "^3.9.1",
-        "gulp-cli": "^1.4.0",
+        "gulp": "^4.0.2",
+        "gulp-cli": "^2.2.0",
         "lme": "^1.5.3",
-        "mocha": "^3.4.2",
+        "mocha": "^7.0.0",
         "pre-commit": "^1.2.2",
         "prettier": "^1.5.3",
         "ts-node": "^3.3.0",
         "tslint": "^5.5.0",
-        "typescript": "^2.4.2"
+        "typescript": "^3.7.5"
     },
     "pre-commit": [
         "preCommit-msg",
         "lint-noFix"
     ],
     "keywords": [
-        "sql", "squel", "postgres", "mysql", "database", "query"
+        "sql",
+        "squel",
+        "postgres",
+        "mysql",
+        "database",
+        "query"
     ],
-    "greenkeeper":{
-        "ignore":[
-        "@types/chai",
-        "@types/del",
-        "@types/gulp",
-        "@types/mocha",
-        "@types/node",
-        "chai",
-        "concurrently",
-        "cross-env",
-        "del",
-        "gulp",
-        "gulp-cli",
-        "lme",
-        "mocha",
-        "pre-commit",
-        "prettier",
-        "ts-node",
-        "tslint",
-        "typescript"
+    "greenkeeper": {
+        "ignore": [
+            "@types/chai",
+            "@types/del",
+            "@types/gulp",
+            "@types/mocha",
+            "@types/node",
+            "chai",
+            "concurrently",
+            "cross-env",
+            "del",
+            "gulp",
+            "gulp-cli",
+            "lme",
+            "mocha",
+            "pre-commit",
+            "prettier",
+            "ts-node",
+            "tslint",
+            "typescript"
         ]
     }
 }
